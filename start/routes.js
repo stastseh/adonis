@@ -17,3 +17,12 @@
 const Route = use('Route')
 
 Route.on('/').render('welcome')
+
+//users routes
+Route.get('/users' , 'UserController.index').as('users')
+Route.get('/users/:id', 'UserController.edit')
+Route.post('/users/:id', 'UserController.store')
+Route.post('/users-save/:id', 'UserController.save')
+Route.get('/users-delete/:id', 'UserController.destroy')
+
+
